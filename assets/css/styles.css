@@ -484,56 +484,78 @@ img {
     width: 450px;
   }
 }
-/* ===== Skills Section ===== */
+
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Skills Container */
 .skills__container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
+/* Each Skills Category */
 .skills__category {
-  flex: 1;
-}
-
-.skills__subtitle {
-  font-size: 1.5rem;
-  color: #3F72AF;
-  margin-bottom: 1rem;
-  font-weight: bold;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
   text-align: center;
 }
 
+/* Hover Effect */
+.skills__category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Subtitle */
+.skills__subtitle {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Skills List */
 .skills__list {
   list-style: none;
   padding-left: 0;
 }
 
+/* Skills Item */
 .skills__item {
   font-size: 1.1rem;
-  color: #112D4E;
+  color: #333;
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
 }
 
+/* Bullet Point Icon */
 .skills__item::before {
   content: "•"; /* The bullet point */
   font-size: 1.5rem;
-  color: #3F72AF; /* Bullet color */
+  color: #007bff; /* Bullet color */
   position: absolute;
   left: 0;
-  top: -2px; /* Adjusts the vertical position */
+  top: -2px;
 }
 
-/* Adjusting for responsive layouts */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .skills__container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skills__category {
-    margin-bottom: var(--mb-6);
+      flex-direction: column;
+      align-items: center;
   }
 }
 
@@ -590,3 +612,95 @@ img {
 .project__link:hover {
   text-decoration: underline;
 }
+
+
+
+/* Section Exp */
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Experience Container */
+.experience__container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Each Job */
+.experience__job {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 45%; /* Adjusting width to keep both containers in one row */
+  min-width: 300px;
+  text-align: left;
+}
+
+/* Hover Effect */
+.experience__job:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Job Header */
+.job-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.job-header h3 {
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-size: 1rem;
+  color: #666;
+  display: block;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* Job List */
+.job__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.job__list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.job__list i {
+  margin-right: 8px;
+  color: #007bff;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .experience__container {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .experience__job {
+      width: 90%; /* Full width for small screens */
+  }
+}
+
