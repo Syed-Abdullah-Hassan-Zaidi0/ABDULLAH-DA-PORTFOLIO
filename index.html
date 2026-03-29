@@ -4,24 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Abdullah Portfolio</title>
+<title>Syed Abdullah Portfolio</title>
 
-<!-- Icons -->
+<!-- ICONS -->
 <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <style>
 
-/* ===== BASIC RESET ===== */
+/* ===== GENERAL ===== */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 /* ===== PROJECT GRID ===== */
 .projects__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 40px;
 }
@@ -32,6 +36,7 @@ body {
     padding: 15px;
     cursor: pointer;
     transition: 0.3s;
+    background: #fff;
 }
 
 .project__item:hover {
@@ -42,6 +47,12 @@ body {
     width: 100%;
 }
 
+/* ===== DESCRIPTION ===== */
+.project__description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 /* ===== GITHUB BUTTON ===== */
 .github-btn {
     display: inline-block;
@@ -49,23 +60,30 @@ body {
     padding: 8px 12px;
     background: black;
     color: white;
-    text-decoration: none;
     border-radius: 5px;
+    text-decoration: none;
+}
+
+.github-btn i {
+    margin-right: 5px;
 }
 
 /* ===== PROJECT PAGES ===== */
 #project-pages {
     display: none;
-    padding: 40px;
+    padding: 50px;
 }
 
 .project-page {
     display: none;
+    max-width: 800px;
+    margin: auto;
 }
 
 /* ===== BACK BUTTON ===== */
 .back-btn {
     padding: 10px 20px;
+    margin-bottom: 20px;
     background: #4070f4;
     color: white;
     border: none;
@@ -77,107 +95,194 @@ body {
 
 <body>
 
-<!-- ===== MAIN PORTFOLIO ===== -->
+<!-- ================= MAIN PORTFOLIO ================= -->
 <main class="l-main">
 
-<h1 style="text-align:center;">My Projects</h1>
+<h1>My Projects</h1>
 
 <div class="projects__container">
 
-    <!-- ===== PROJECT 1 ===== -->
-    <div class="project__item" onclick="openProject('project1')">
-        <img src="assets/img/t.JPG" class="project__img">
-        <h3>Telecom Customer Churn Prediction</h3>
+<!-- ===== PROJECT 1 ===== -->
+<div class="project__item" onclick="openProject('p1')">
+<img src="assets/img/t.JPG" class="project__img">
 
-        <a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/telecom-churn-analytics"
-           target="_blank"
-           class="github-btn"
-           onclick="event.stopPropagation();">
-           <i class="fab fa-github"></i> View on GitHub
-        </a>
-    </div>
+<h3>Telecom Customer Churn Prediction & Profit Optimization</h3>
 
-    <!-- ===== PROJECT 2 ===== -->
-    <div class="project__item" onclick="openProject('project2')">
-        <img src="assets/img/upsell.png" class="project__img">
-        <h3>Customer Upsell Analytics</h3>
+<p class="project__description">
+Built an end-to-end churn analytics solution using Machine Learning and Power BI.
+Predicted high-risk customers, optimized recall using threshold tuning, and applied
+profit-based decision logic to identify retention targets.
+</p>
 
-        <a href="https://github.com/"
-           target="_blank"
-           class="github-btn"
-           onclick="event.stopPropagation();">
-           <i class="fab fa-github"></i> View on GitHub
-        </a>
-    </div>
+<a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/telecom-churn-analytics"
+target="_blank"
+class="github-btn"
+onclick="event.stopPropagation();">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+</div>
+
+<!-- ===== PROJECT 2 ===== -->
+<div class="project__item" onclick="openProject('p2')">
+<img src="assets/img/upsell.png" class="project__img">
+
+<h3>Revenue-Focused Customer Upsell Analytics</h3>
+
+<p class="project__description">
+Built an end-to-end revenue-driven analytics project to identify customers with high
+upsell potential using Python, SQL, Decision Trees, and Power BI dashboards.
+</p>
+
+<a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/Revenue-Focused-Customer-Upsell-Analytics"
+target="_blank"
+class="github-btn"
+onclick="event.stopPropagation();">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+</div>
+
+<!-- ===== PROJECT 3 ===== -->
+<div class="project__item" onclick="openProject('p3')">
+<img src="assets/img/saas.jpg" class="project__img">
+
+<h3>SaaS Upsell Analytics Project</h3>
+
+<p class="project__description">
+Analyzed SaaS user behavior, feature adoption, and subscription data using SQL,
+clustering models, and Power BI dashboards to identify upgrade opportunities.
+</p>
+
+<a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/-SaaS-User-Analytics-Upsell-Strategy"
+target="_blank"
+class="github-btn"
+onclick="event.stopPropagation();">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+</div>
+
+<!-- ===== PROJECT 4 ===== -->
+<div class="project__item" onclick="openProject('p4')">
+<img src="assets/img/1.PNG" class="project__img">
+
+<h3>US Air Quality Index Analysis</h3>
+
+<p class="project__description">
+In-depth analysis of US air quality trends (1980–2022) using data visualization
+and statistical insights to identify regional and seasonal patterns.
+</p>
+
+<a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/AirQualityIndexUsa"
+target="_blank"
+class="github-btn"
+onclick="event.stopPropagation();">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+</div>
+
+<!-- ===== PROJECT 5 ===== -->
+<div class="project__item" onclick="openProject('p5')">
+<img src="assets/img/1ad.PNG" class="project__img">
+
+<h3>Adidas Sales Analysis Dashboard</h3>
+
+<p class="project__description">
+Developed a dynamic Power BI dashboard analyzing Adidas sales (2020–2021),
+highlighting regional performance, product trends, and top retailers.
+</p>
+
+<a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/Adidas-Sales"
+target="_blank"
+class="github-btn"
+onclick="event.stopPropagation();">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+</div>
+
+<!-- ===== PROJECT 6 ===== -->
+<div class="project__item" onclick="openProject('p6')">
+<img src="assets/img/fyp.PNG" class="project__img">
+
+<h3>Flood Assessment Using Remote Sensing (FYP)</h3>
+
+<p class="project__description">
+Assessed flood destruction in Larkana, Sukkur, and Shikarpur using satellite data,
+Google Earth Engine, and a .NET Blazor visualization system.
+</p>
+
+<a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/FloodAssessment"
+target="_blank"
+class="github-btn"
+onclick="event.stopPropagation();">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+</div>
 
 </div>
 
 </main>
 
 
-<!-- ===== PROJECT DETAIL PAGES ===== -->
+<!-- ================= PROJECT DETAIL PAGES ================= -->
 <section id="project-pages">
 
-    <!-- PROJECT 1 PAGE -->
-    <div class="project-page" id="project1">
-        <button class="back-btn" onclick="closeProject()">⬅ Back</button>
+<div class="project-page" id="p1">
+<button class="back-btn" onclick="closeProject()">⬅ Back</button>
+<h1>Welcome to "Telecom Customer Churn Prediction"</h1>
+<p>Detailed research, methodology, and business insights go here.</p>
+</div>
 
-        <h1>Welcome to "Telecom Customer Churn Prediction"</h1>
+<div class="project-page" id="p2">
+<button class="back-btn" onclick="closeProject()">⬅ Back</button>
+<h1>Welcome to "Customer Upsell Analytics"</h1>
+<p>Detailed explanation of approach and revenue strategy.</p>
+</div>
 
-        <p>
-            This project predicts customer churn using machine learning
-            and helps businesses retain high-value customers.
-        </p>
+<div class="project-page" id="p3">
+<button class="back-btn" onclick="closeProject()">⬅ Back</button>
+<h1>Welcome to "SaaS Upsell Analytics"</h1>
+<p>Clustering model explanation and insights.</p>
+</div>
 
-        <h3>Research Sections:</h3>
-        <ul>
-            <li>Problem Statement</li>
-            <li>Dataset</li>
-            <li>Methodology</li>
-            <li>Results</li>
-        </ul>
-    </div>
+<div class="project-page" id="p4">
+<button class="back-btn" onclick="closeProject()">⬅ Back</button>
+<h1>Welcome to "US Air Quality Index"</h1>
+<p>Trend analysis and environmental insights.</p>
+</div>
 
-    <!-- PROJECT 2 PAGE -->
-    <div class="project-page" id="project2">
-        <button class="back-btn" onclick="closeProject()">⬅ Back</button>
+<div class="project-page" id="p5">
+<button class="back-btn" onclick="closeProject()">⬅ Back</button>
+<h1>Welcome to "Adidas Sales Dashboard"</h1>
+<p>Dashboard breakdown and business findings.</p>
+</div>
 
-        <h1>Welcome to "Customer Upsell Analytics"</h1>
-
-        <p>
-            This project identifies customers with high upsell potential
-            using data analysis and machine learning.
-        </p>
-    </div>
+<div class="project-page" id="p6">
+<button class="back-btn" onclick="closeProject()">⬅ Back</button>
+<h1>Welcome to "Flood Assessment FYP"</h1>
+<p>Satellite analysis and flood impact research.</p>
+</div>
 
 </section>
 
 
-<!-- ===== JAVASCRIPT ===== -->
+<!-- ================= JAVASCRIPT ================= -->
 <script>
 
-// OPEN PROJECT PAGE
-function openProject(projectId) {
+/* OPEN PROJECT PAGE */
+function openProject(id) {
+document.querySelector('.l-main').style.display = 'none';
+document.getElementById('project-pages').style.display = 'block';
 
-    // Hide main site
-    document.querySelector('.l-main').style.display = 'none';
+document.querySelectorAll('.project-page').forEach(p => {
+p.style.display = 'none';
+});
 
-    // Show project container
-    document.getElementById('project-pages').style.display = 'block';
-
-    // Hide all project pages
-    document.querySelectorAll('.project-page').forEach(p => {
-        p.style.display = 'none';
-    });
-
-    // Show selected page
-    document.getElementById(projectId).style.display = 'block';
+document.getElementById(id).style.display = 'block';
 }
 
-// BACK TO MAIN
+/* BACK TO MAIN */
 function closeProject() {
-    document.querySelector('.l-main').style.display = 'block';
-    document.getElementById('project-pages').style.display = 'none';
+document.querySelector('.l-main').style.display = 'block';
+document.getElementById('project-pages').style.display = 'none';
 }
 
 </script>
