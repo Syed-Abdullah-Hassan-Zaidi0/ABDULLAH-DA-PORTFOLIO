@@ -10,7 +10,6 @@
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23007BFF' font-family='Arial, sans-serif' font-weight='bold'>≠</text></svg>">
 
 
     <title>Abdullah Portfolio</title>
@@ -221,9 +220,34 @@
         <section class="projects section" id="projects">
             <h2 class="section-title">Projects</h2>
             <p class="projects__intro">Click any project card to open a full research-style detail view. Use the
-                GitHub button to go straight to the repository.</p>
+                GitHub button to go straight to the repository when a link is available.</p>
             <div class="projects__container bd-grid">
                 <!-- Project 1 -->
+                <article class="project__item">
+                    <button type="button" class="project__card-trigger" data-project="aiAnalyst"
+                        aria-label="Open Personal AI Data Analyst"></button>
+                    <div class="project__media">
+                        <img src="assets/img/AI.JPG" alt="Preview image for Personal AI Data Analyst project"
+                            class="project__img">
+                    </div>
+                    <div class="project__content">
+                        <p class="project__tag">DA/AI Project | Python + Streamlit</p>
+                        <h3 class="project__title">Personal AI Data Analyst</h3>
+                        <p class="project__description">AI-assisted data analysis app that turns prompts into trusted
+                            Python execution on real CSV, Excel, and JSON datasets instead of relying on direct LLM
+                            answers.</p>
+                    </div>
+                    <div class="project__footer">
+                        <span class="project__card-note">Click the card to open the full project page.</span>
+                        <a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/Personal-AI-Data-Analyst"
+                            target="_blank" rel="noopener noreferrer" class="project__github">
+                            <i class='bx bxl-github' aria-hidden="true"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
                 <article class="project__item">
                     <button type="button" class="project__card-trigger" data-project="telecom"
                         aria-label="Open Telecom Customer Churn Prediction and Profit Optimization"></button>
@@ -248,7 +272,7 @@
                     </div>
                 </article>
 
-                <!-- Project 2 -->
+                <!-- Project 3 -->
                 <article class="project__item">
                     <button type="button" class="project__card-trigger" data-project="upsell"
                         aria-label="Open Revenue-Focused Customer Upsell Analytics"></button>
@@ -272,7 +296,7 @@
                     </div>
                 </article>
 
-                <!-- Project 3 -->
+                <!-- Project 4 -->
                 <article class="project__item">
                     <button type="button" class="project__card-trigger" data-project="saas"
                         aria-label="Open SaaS Upsell Analytics Project"></button>
@@ -296,7 +320,7 @@
                     </div>
                 </article>
 
-                <!-- Project 4 -->
+                <!-- Project 5 -->
                 <article class="project__item">
                     <button type="button" class="project__card-trigger" data-project="airquality"
                         aria-label="Open US Air Quality Index"></button>
@@ -320,7 +344,7 @@
                     </div>
                 </article>
 
-                <!-- Project 5 -->
+                <!-- Project 6 -->
                 <article class="project__item">
                     <button type="button" class="project__card-trigger" data-project="adidas"
                         aria-label="Open Adidas Sales Analysis Dashboard"></button>
@@ -344,7 +368,7 @@
                     </div>
                 </article>
 
-                <!-- Project 6 -->
+                <!-- Project 7 -->
                 <article class="project__item">
                     <button type="button" class="project__card-trigger" data-project="flood"
                         aria-label="Open Flood Destruction Assessment project"></button>
@@ -368,7 +392,7 @@
                     </div>
                 </article>
 
-                <!-- Project 7 -->
+                <!-- Project 8 -->
                 <article class="project__item">
                     <button type="button" class="project__card-trigger" data-project="nestfind"
                         aria-label="Open NestFind Hostel Management System"></button>
@@ -562,6 +586,178 @@
 
     // Project detail content used by the clickable cards
     const projectDetails = {
+        aiAnalyst: {
+            eyebrow: 'DA/AI Project',
+            title: 'Welcome to Personal AI Data Analyst',
+            image: 'assets/img/bg3.png',
+            imageAlt: 'Personal AI Data Analyst project',
+            intro: 'Personal AI Data Analyst is a Streamlit application that combines AI with real Python execution so users can analyze messy CSV, Excel, and JSON files without depending on unreliable direct LLM calculations.',
+            tags: ['Python', 'Streamlit', 'pandas', 'Ollama'],
+            github: '',
+            pdf: 'assets/files/AI.pdf',
+            pdfInHero: true,
+            pdfTitle: 'Personal AI Data Analyst PDF Viewer',
+            bodyHtml: `
+                <div class="project-page__grid">
+                    <section class="project-page__section project-page__section--wide">
+                        <h3>Project Overview</h3>
+                        <p>Many people work with messy CSV, Excel, or JSON files but lose time trying to remember pandas syntax, plotting code, and data-cleaning steps. Personal AI Data Analyst solves that by letting users interact with data through a guided dashboard that turns requests into executable Python workflows.</p>
+                    </section>
+
+                    <section class="project-page__section">
+                        <h3>Problem</h3>
+                        <p>Traditional chat-with-your-data tools often ask the LLM to answer directly. That creates a reliability problem because language models can hallucinate values, summaries, and insights when working with real datasets.</p>
+                    </section>
+
+                    <section class="project-page__section">
+                        <h3>Why This Project Matters</h3>
+                        <p>This project is designed around trust. Instead of asking the model to do the math itself, Python performs the calculations on the real DataFrame, which makes the results much more dependable for practical analysis work.</p>
+                    </section>
+
+                    <section class="project-page__section project-page__section--wide">
+                        <h3>Solution</h3>
+                        <ol class="project-page__steps">
+                            <li>
+                                <strong>Load the dataset</strong>
+                                <p>The app accepts CSV, Excel, and JSON files and loads them into pandas for structured analysis.</p>
+                            </li>
+                            <li>
+                                <strong>Detect column types</strong>
+                                <p>It automatically identifies numeric, categorical, and datetime-style columns so the interface can suggest relevant actions.</p>
+                            </li>
+                            <li>
+                                <strong>Recommend useful actions</strong>
+                                <p>The app suggests analysis ideas, cleaning actions, and chart prompts based on the dataset structure.</p>
+                            </li>
+                            <li>
+                                <strong>Translate common prompts deterministically</strong>
+                                <p>Common user requests are mapped into trusted Python code without needing an LLM.</p>
+                            </li>
+                            <li>
+                                <strong>Use a local model only when needed</strong>
+                                <p>For custom prompts, the app can call a local Ollama model such as <code class="project-page__formula">llama3.2:1b</code>.</p>
+                            </li>
+                            <li>
+                                <strong>Execute code on the real DataFrame</strong>
+                                <p>All calculations run against the actual data instead of being guessed by the model.</p>
+                            </li>
+                            <li>
+                                <strong>Return usable outputs</strong>
+                                <p>The result can be presented as text, a table, or a chart depending on the selected analysis.</p>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section class="project-page__section">
+                        <h3>Technologies Used</h3>
+                        <ul>
+                            <li><strong>Python:</strong> main programming language for the application.</li>
+                            <li><strong>Streamlit:</strong> rapid web dashboard interface for uploading files and running analysis.</li>
+                            <li><strong>pandas:</strong> dataset loading, cleaning, transformation, and analysis.</li>
+                            <li><strong>matplotlib:</strong> visualizations such as histograms, scatter plots, line charts, moving averages, and heatmaps.</li>
+                            <li><strong>numpy:</strong> numeric operations and array-based calculations.</li>
+                            <li><strong>scipy:</strong> anomaly detection using z-score logic.</li>
+                            <li><strong>openpyxl:</strong> Excel file reading support.</li>
+                            <li><strong>Ollama:</strong> local LLM execution for custom prompt-to-code generation.</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-page__section">
+                        <h3>Advantages</h3>
+                        <ul>
+                            <li>More accurate than a normal chatbot because Python executes calculations on the real dataset.</li>
+                            <li>Works directly with local CSV, Excel, and JSON files.</li>
+                            <li>Supports private local AI with Ollama instead of relying on a cloud API.</li>
+                            <li>Helps beginners who do not remember pandas or matplotlib syntax.</li>
+                            <li>Enables fast exploration with prompt, chart, and cleaning suggestions.</li>
+                            <li>Supports better data storytelling by returning both tables and charts.</li>
+                            <li>Can be extended with new deterministic prompts, cleaning rules, and chart types.</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-page__section project-page__section--wide">
+                        <h3>Main Functions</h3>
+                        <ul>
+                            <li>File loading for CSV, Excel, and JSON formats.</li>
+                            <li>Column type detection for numeric, categorical, and datetime-like fields.</li>
+                            <li>Prompt suggestion generation based on dataset structure.</li>
+                            <li>Chart suggestion generation including histograms, scatter plots, line charts, moving averages, and heatmaps.</li>
+                            <li>Data cleaning suggestions for duplicates, missing values, placeholder text, whitespace issues, and type conversion opportunities.</li>
+                            <li>Deterministic prompt-to-code translation for common analysis requests.</li>
+                            <li>Local LLM integration through Ollama for unmatched custom prompts.</li>
+                            <li>Safe execution flow against the real DataFrame.</li>
+                            <li>Downloadable CSV exports for table results.</li>
+                            <li>Interactive dashboard experience through Streamlit.</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-page__section project-page__section--wide">
+                        <h3>How Someone Can Use It From GitHub</h3>
+                        <ol class="project-page__steps">
+                            <li>
+                                <strong>Clone the repository</strong>
+                                <p>Run <code class="project-page__formula">git clone &lt;your-repo-url&gt;</code>.</p>
+                            </li>
+                            <li>
+                                <strong>Move into the project folder</strong>
+                                <p>Use <code class="project-page__formula">cd AI PROJECT</code>.</p>
+                            </li>
+                            <li>
+                                <strong>Install dependencies</strong>
+                                <p>Run <code class="project-page__formula">py -3 -m pip install -r requirements.txt</code>.</p>
+                            </li>
+                            <li>
+                                <strong>Install Ollama if needed</strong>
+                                <p>Users only need Ollama when they want custom AI-generated prompts.</p>
+                            </li>
+                            <li>
+                                <strong>Pull a local model</strong>
+                                <p>For example, run <code class="project-page__formula">ollama pull llama3.2:1b</code>.</p>
+                            </li>
+                            <li>
+                                <strong>Start the app</strong>
+                                <p>Launch it with <code class="project-page__formula">.\\run_app.ps1</code>.</p>
+                            </li>
+                            <li>
+                                <strong>Open the Streamlit dashboard</strong>
+                                <p>Visit <code class="project-page__formula">http://localhost:8501</code> in the browser.</p>
+                            </li>
+                            <li>
+                                <strong>Upload a dataset</strong>
+                                <p>Users can upload CSV, Excel, or JSON files.</p>
+                            </li>
+                            <li>
+                                <strong>Choose a prompt or chart</strong>
+                                <p>Select a suggested analysis, a chart idea, or write a custom prompt.</p>
+                            </li>
+                            <li>
+                                <strong>Run analysis</strong>
+                                <p>Click <strong>Run analysis</strong> to receive the result as text, table, or visualization.</p>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section class="project-page__section">
+                        <h3>Repository Link</h3>
+                        <a href="https://github.com/Syed-Abdullah-Hassan-Zaidi0/Personal-AI-Data-Analyst"
+                            target="_blank" rel="noopener noreferrer" class="project__github">
+                            <i class='bx bxl-github' aria-hidden="true"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                    </section>
+
+                    <section class="project-page__section">
+                        <h3>PDF Documentation</h3>
+                        <p>The uploaded project PDF is embedded directly in this project view so visitors can read the full write-up without leaving the portfolio.</p>
+                    </section>
+
+                    <section class="project-page__section project-page__section--wide">
+                        <h3>Conclusion</h3>
+                        <p>Personal AI Data Analyst is a practical DA/AI project that makes data analysis more accessible, more reliable, and more beginner-friendly. By combining deterministic Python execution with optional local AI support, it offers a stronger alternative to normal chat-with-your-data tools.</p>
+                    </section>
+                </div>
+            `
+        },
         telecom: {
             eyebrow: 'Predictive Analytics Case Study',
             title: 'Welcome to Telecom Customer Churn Prediction & Profit Optimization',
@@ -2093,6 +2289,18 @@
     .project__github:hover {
         transform: translateY(-1px);
         box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    .project__github--placeholder {
+        background-color: #64748b;
+        opacity: 0.88;
+        pointer-events: none;
+        box-shadow: none;
+    }
+
+    .project__github--placeholder:hover {
+        transform: none;
+        box-shadow: none;
     }
 
     .project__github i {
